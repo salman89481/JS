@@ -34,3 +34,8 @@ console.log(myn2);
 
 console.log("C",myArr);
 
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((number, index) => {
+  console.log(`Element at index ${index}: ${number}`);
+});
