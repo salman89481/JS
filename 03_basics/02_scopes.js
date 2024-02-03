@@ -21,3 +21,31 @@ addTwo(9)
 
 
 //hoisting
+
+
+//  const addition = (a,b)=>{
+//     for (let index = 0; index < 4; index++) {
+//         var jiju = 4
+//         console.log(jiju);
+//         break
+        
+//     }
+//     console.log(jiju);
+    
+//     return (a+b+c)
+// }
+// addition(3,4)
+
+
+const addition = (a,b)=>{
+    for (let index = 0; index < 4; index++) {
+        let jiju = 4
+        console.log(jiju);
+        break
+        
+    }
+    console.log(jiju,"pyare wale");
+    
+    return (a+b+c)
+}
+addition(3,4)
