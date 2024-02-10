@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>salman ahmad</title>
+</head>
+<body>
+    <div class="card">
+        <img src="faizan white bg (1).jpeg" alt="Avatar" style="width:50%">
+        <div class="container">
+          <h4><b>Mera Koi follower nhi hai</b></h4>
+          <p></p>
+        </div>
+      </div>
+    <script>
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+        const submit = document.createElement('button');
+        submit.textContent = "Know Details";
+        const div = document.querySelector('.container')
+        div.appendChild(submit);
+        let image = document.querySelector('img');
+        let h4 = document.querySelector('h4');
+
+        let image_url;
+        let followers;
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET',requestUrl)
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4){
+                console.log(this.responseText);
+                const data = JSON.parse(this.responseText);
+                followers = data.followers;
+                image_url = data.avatar_url;
+                console.log(image_url);
+            }
+        }
+        xhr.send();
+        submit.addEventListener('click',function(e){
+            e.stopPropagation();
+            image.src = image_url;
+
+            h4.textContent = `Followers : ${followers}`;
+
+
+            submit.remove();
+        })
+
+
+
+
+    </script>
+</body>
+</html>
