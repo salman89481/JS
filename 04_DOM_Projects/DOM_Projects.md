@@ -182,3 +182,64 @@ const p = document.createElement('p');
 
    })
  }
+
+ ```
+## project 5 Random number keyboard keys
+
+```javascript
+
+```
+const insert =  document.getElementById('insert');
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML = `
+  <div class ='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th> 
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key=== " " ? "Space ": e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  </table>
+    </div>
+  `;
+});
+
+## project 6 unlimited colors
+
+```javascript
+
+```
+
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+console.log(Math.floor(Math.random()*16));
+let IntervalID;
+// random color
+
+const random_color = function(){
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i =0 ; i<6;i++){
+    color += hex[Math.floor(Math.random()*16)]
+  }
+  return color;
+};
+start.addEventListener('click',function(e){
+  const body = document.querySelector('body')
+  if (!IntervalID){
+    IntervalID = setInterval(function(){
+      body.style.backgroundColor = random_color();
+    },1000);
+  }
+});
+
+stop.addEventListener('click', function(e){
+  clearInterval(IntervalID);
+  IntervalID = null;
+
+});
