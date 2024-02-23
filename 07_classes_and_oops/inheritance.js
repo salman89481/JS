@@ -23,5 +23,7 @@ const chai = new Teacher("salman" ,"salman@gmail.com","16162.3")
 chai.addCourse()
 chai.logMe()
 
+//chai === teacher false aaega because it makes instance
+
 console.log(chai instanceof Teacher);
 console.log(Teacher instanceof User);
