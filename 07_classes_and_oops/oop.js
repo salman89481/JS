@@ -18,7 +18,7 @@ function User(username , loginCount , signedIn){
 
     this.getUserDetails=function(){
         console.log(`Welcome ${this.username}`);
-    }
+    } 
     return this
 }
 

@@ -37,29 +37,29 @@
 
 
 
-const promiseFour = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error = true;
-        if (!error) {
-            resolve({username : "ahmad" , email : "salman8948@gamil.in"});
+// const promiseFour = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         let error = true;
+//         if (!error) {
+//             resolve({username : "ahmad" , email : "salman8948@gamil.in"});
             
-        }else{
-            reject("Error : Somehting went wrong");
-        }
-    },1000);
+//         }else{
+//             reject("Error : Somehting went wrong");
+//         }
+//     },1000);
 
-})
+// })
 
-promiseFour.then((user)=>{
-    console.log(user);
-    return user.username
-}).then((username)=>{
-    console.log(username);
-}).catch(function(error){
-    console.log(error);
-}).finally(()=>{
-    console.log("The Promise is either resolved or rejected");
-})
+// promiseFour.then((user)=>{
+//     console.log(user);
+//     return user.username
+// }).then((username)=>{
+//     console.log(username);
+// }).catch(function(error){
+//     console.log(error);
+// }).finally(()=>{
+//     console.log("The Promise is either resolved or rejected");
+// })
 
 
 // const promiseFive =  new Promise(function(resolve , reject){
@@ -75,10 +75,11 @@ promiseFour.then((user)=>{
 
 // async function ConsumePromiseFive(){
 //     try{
-//         const response = await promiseFive()
+//         const response = await promiseFive
 //         console.log(response);
+//         console.log("salman");
 
-//     } catch(error){
+//     }catch(error){
 //         console.log(error);
 //     }
 // }
@@ -86,32 +87,49 @@ promiseFour.then((user)=>{
 //  ConsumePromiseFive()
 
 // function myFun(result) {
-//     console.log(result);
+//       console.log(result);
 // }
 
 // console.log('Start');
 // getData(myFun);
 // console.log('End');
 
-// function getData(callback) {
+//  function getData(callback) {
 //     setTimeout(function() {
 //         callback('Data fetched asynchronously');
 //     }, 2000);
 // }
 
 
-// async function getAllUsers(){
-    //     try{
-    //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    //         const data  =await response.json();
-    //         console.log(data);
-    
-    //     } catch (error){
-        //         console.log("E:", error);
-        //     }
-        // }
+// console.log("Start");
 
-        // getAllUsers();
+// async function getData(){
+//     return new Promise(resolve =>{
+//         setTimeout(function(){
+//             resolve("Data fetched asynchronously");
+//         },2000);
+//     });
+// }
+
+// getData().then((result)=>{
+//     console.log(result);
+//     console.log("end");
+    
+// })
+
+
+// async function getAllUsers(){
+//         try{
+//             const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//             const data  =await response.json();
+//             console.log(data);
+    
+//         } catch (error){
+//                 console.log("E:", error);
+//             }
+//         }
+
+//         getAllUsers();
         
 // fetch('https://jsonplaceholder.typicode.com/users')
 // .then((response)=>{
